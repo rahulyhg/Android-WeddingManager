@@ -1,0 +1,4 @@
+Android-WeddingManager
+======================
+
+WeddingManager Project
