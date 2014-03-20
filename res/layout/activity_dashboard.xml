@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <TextView 
+        android:id="@+id/welcome_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#3498db"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginBottom="50dp"
+        android:padding="10dp"
+        android:text="Welcome"
+        />
+    
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_below="@id/welcome_text"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/hotel_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/hotel"
+            android:scaleType="fitXY"
+            android:onClick="load"
+             />
+
+        <ImageButton
+            android:id="@+id/deco_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/deco"
+            android:scaleType="fitXY" 
+            android:onClick="load"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/linear1" >
+
+        <ImageButton
+            android:id="@+id/cake_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/cake"
+            android:scaleType="fitXY" 
+            android:onClick="load"
+            />
+
+        <ImageButton
+            android:id="@+id/car_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/car"
+            android:scaleType="fitXY"
+            android:onClick="load"
+             />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- TODO4 MENU ACTION ITEM -->
+    <item
+        android:id="@+id/menu_calculate"
+        android:orderInCategory="100"
+        android:title="calcul"
+        android:icon="@drawable/calcul"
+        android:showAsAction="ifRoom|withText"
+        />
+
+</menu>

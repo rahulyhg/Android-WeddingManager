@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wedding+</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+
+    <string-array name="hotel_name">
+        <item>El Mouradi</item>
+        <item>Regency</item>
+        <item>Grand Hotel Tunis</item>
+        <item>Mercure</item>
+    </string-array>
+    <string-array name="hotel_price">
+        <item>5500</item>
+        <item>8000</item>
+        <item>9500</item>
+        <item>3000</item>
+    </string-array>
+    <string-array name="hotel_image">
+        <item>@drawable/img_mouradi</item>
+        <item>@drawable/img_regency</item>
+        <item>@drawable/img_grand_hotel</item>
+        <item>@drawable/img_mercure</item>
+    </string-array>
+    <string-array name="cake_name">
+        <item>Rekik</item>
+        <item>Gourmandise</item>
+        <item>Takacim</item>
+        <item>Jawhara</item>
+        <item>Hachicha</item>
+        <item>Masmoudi</item>
+    </string-array>
+    <string-array name="cake_price">
+        <item>2000</item>
+        <item>2200</item>
+        <item>1800</item>
+        <item>1250</item>
+        <item>2150</item>
+        <item>2600</item>
+    </string-array>
+    <string-array name="cake_image">
+        <item>@drawable/img_rekik</item>
+        <item>@drawable/img_gourmandise</item>
+        <item>@drawable/img_takacim</item>
+        <item>@drawable/img_jawhara</item>
+        <item>@drawable/img_hachicha</item>
+        <item>@drawable/img_masmoudi</item>
+    </string-array>
+    <string-array name="car_name">
+        <item>Mercedes S500 LWB</item>
+        <item>BMW 5 Series M</item>
+        <item>Audi A5</item>
+        <item>Porsche Panamera</item>
+    </string-array>
+    <string-array name="car_price">
+        <item>800</item>
+        <item>750</item>
+        <item>600</item>
+        <item>1300</item>
+    </string-array>
+    <string-array name="car_image">
+        <item>@drawable/img_mercedes</item>
+        <item>@drawable/img_bmw</item>
+        <item>@drawable/img_audi</item>
+        <item>@drawable/img_porsche</item>
+    </string-array>
+    <string-array name="deco_name">
+        <item>Casabo</item>
+        <item>Paradise</item>
+        <item>Mano</item>
+    </string-array>
+    <string-array name="deco_price">
+        <item>5000</item>
+        <item>4000</item>
+        <item>3500</item>
+    </string-array>
+    <string-array name="deco_image">
+        <item>@drawable/img_casabo</item>
+        <item>@drawable/img_paradise</item>
+        <item>@drawable/img_mano</item>
+    </string-array>
+
+    <string name="title_activity_billing">Facture</string>
+
+</resources>
