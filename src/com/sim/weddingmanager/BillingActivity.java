@@ -3,12 +3,12 @@ package com.sim.weddingmanager;
 import java.util.HashMap;
 import java.util.List;
 
-import com.sim.weddingmanager.dao.EventDAO;
-import com.sim.weddingmanager.entities.Event;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.sim.weddingmanager.dao.EventDAO;
+import com.sim.weddingmanager.entities.Event;
 
 public class BillingActivity extends Activity {
 
