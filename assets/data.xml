@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+<hotels>
+
+    <hotel>
+        <name>El Mouradi</name>
+        <price>5500</price>
+        <picture>img_mouradi</picture>
+    </hotel>
+
+    <hotel>
+
+        <name>Regency</name>
+        <price>8000</price>
+        <picture>img_regency</picture>
+    </hotel>
+
+    <hotel>
+        <name>Grand Hotel Tunis</name>
+        <price>9500</price>
+        <picture>img_grand_hotel</picture>
+    </hotel>
+
+    <hotel>
+        <name>Mercure</name>
+        <price>3000</price>
+        <picture>img_mercure</picture>
+    </hotel>
+
+</hotels>
+<cakes>
+   <cake>
+        <name>Rekik</name>
+        <price>2000</price>
+        <picture>img_rekik</picture>
+    </cake>
+    
+    <cake>
+        <name>Gourmandise</name>
+        <price>2200</price>
+        <picture>img_gourmandise</picture>
+    </cake>
+    
+    <cake>
+        <name>Takacim</name>
+        <price>1800</price>
+        <picture>img_takacim</picture>
+    </cake>
+</cakes>
+
+<cars>
+    <car>
+        <name>Mercedes S500 LWB</name>
+        <price>800</price>
+        <picture>img_mercedes</picture>
+    </car>
+    <car>
+        <name>BMW 5 Series M</name>
+        <price>750</price>
+        <picture>img_bmw</picture>
+    </car>
+    
+</cars>
+
+<decos>
+    <deco>
+        <name>Casabo</name>
+        <price>5000</price>
+        <picture>img_casabo</picture>
+    </deco>
+    
+     <deco>
+        <name>Paradise</name>
+        <price>4000</price>
+        <picture>img_paradise</picture>
+    </deco>
+
+ </decos>  
+</root>

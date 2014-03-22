@@ -33,8 +33,6 @@ public class DashboardActivity extends Activity {
 		this.findViews();
 		this.getSharedPreferences();
 
-		/** TODO 4 MENU ACTION ITEM **/
-
 	}
 
 	private void findViews() {
@@ -55,16 +53,8 @@ public class DashboardActivity extends Activity {
 
 	}
 
-	/**
-	 * TODO 5 ONCLICK IMAGEBUTTON + EXTRAS + START_ACTIVITY_FOR_RESULT ->
-	 * EventListActivity
-	 **/
-
+	
 	public void load(View view) {
-		// Toast toast = Toast.makeText(DashboardActivity.this, "Click Event Category",
-		// Toast.LENGTH_LONG);
-		// toast.show();
-		
 		Intent intent = new Intent(DashboardActivity.this,
 				EventListActivity.class);
 
@@ -95,7 +85,6 @@ public class DashboardActivity extends Activity {
 
 	}
 
-	/** TODO 6 ON_ACTIVITY_RESULT -> TOAST **/
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		Bundle bundle = data.getExtras();
@@ -120,9 +109,7 @@ public class DashboardActivity extends Activity {
 		case R.id.menu_calculate:
 			Intent intent = new Intent(DashboardActivity.this,
 					BillingActivity.class);
-			// intent.putExtra("myvar", spinner.getSelectedItem().toString());
 			startActivity(intent);
-			// startActivityForResult(intent, REQUEST_CODE);
 			return true;
 
 		default:
