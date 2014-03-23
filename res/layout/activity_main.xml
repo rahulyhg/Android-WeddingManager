@@ -2,33 +2,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" 
-    android:layout_margin="20dp">
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="0dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/androidpng"
+     >
 
     <EditText
         android:id="@+id/edit_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
-        android:inputType="textPersonName"
-        android:hint="Nom et Prénom" />
+        android:hint="Nom et Prénom"
+        android:inputType="textPersonName" />
+    
 
     <EditText
         android:id="@+id/edit_date"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/edit_name"
-        android:inputType="date" 
-        android:hint="date"/>
-    
-    <Button 
-        android:id="@+id/button_validate"
+        android:hint="Date"
+        android:inputType="date" />
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="valider"
-        />
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/button_validate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Valider" />
+
+        <Button
+            android:id="@+id/button_finish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fermer" />
+    </LinearLayout>
 
 </RelativeLayout>

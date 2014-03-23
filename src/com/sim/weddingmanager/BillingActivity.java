@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -17,18 +18,28 @@ public class BillingActivity extends Activity {
 			txtHotelSelection, txtCarPrice, txtDecoPrice, txtCakePrice,
 			txtHotelPrice, txtTotal;
 
+	String strPersonFullName;
+	
+	public static final String PREF_NAME = "EspritMobilePrefs";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_billing);
 
+		this.getSharedPreferences();
+		
 		this.findViews();
 
-		/** TODO 11 GET DETAILS FROM DATABASE **/
-		EventDAO eventDAO = new EventDAO(this);
-		final List<Event> list = eventDAO.readAllAsc();
+		this.computeResult();
+		
 
-		/** TODO 12 SET VALUES TO TEXT VIEWS + CALCULATE THE BILLING **/
+	}
+	
+	private void computeResult() {
+		EventDAO eventDAO = new EventDAO(this);
+		final List<Event> list = eventDAO.readAllWhere(Event.COLUMN_PERSON, this.strPersonFullName);
+		
 		double total = 0;
 		for (Event event : list) {
 			map = new HashMap<String, String>();
@@ -56,7 +67,7 @@ public class BillingActivity extends Activity {
 		}
 
 		txtTotal.setText(String.valueOf(total) + " DT");
-
+		
 	}
 
 	private void findViews() {
@@ -74,6 +85,14 @@ public class BillingActivity extends Activity {
 
 		txtTotal = (TextView) findViewById(R.id.total);
 
+	}
+	
+	private void getSharedPreferences() {
+		SharedPreferences settings = getSharedPreferences(PREF_NAME,
+				MODE_PRIVATE);
+
+		this.strPersonFullName = settings.getString("thename", "");
+		
 	}
 
 }

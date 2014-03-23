@@ -6,5 +6,7 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="title_activity_billing">Facture</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

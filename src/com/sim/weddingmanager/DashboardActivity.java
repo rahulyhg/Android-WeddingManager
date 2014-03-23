@@ -1,5 +1,6 @@
 package com.sim.weddingmanager;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,17 +25,24 @@ public class DashboardActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dashboard);
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			// Show the Up button in the action bar.
-			getActionBar().setDisplayHomeAsUpEnabled(true);
-		}
-
+		
 		this.findViews();
 		this.getSharedPreferences();
 
 	}
 
 	private void findViews() {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			// Show the Up button in the action bar.
+			getActionBar().setDisplayHomeAsUpEnabled(true);
+		}
+		
+		//final ActionBar actionBar = getActionBar();
+		//actionBar.setDisplayShowTitleEnabled(false);
+		//actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+		
+
+		
 		img_cake = (ImageButton) findViewById(R.id.cake_image);
 		img_car = (ImageButton) findViewById(R.id.car_image);
 		img_deco = (ImageButton) findViewById(R.id.deco_image);
@@ -86,12 +94,16 @@ public class DashboardActivity extends Activity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		Bundle bundle = data.getExtras();
-		String extraItem = bundle.getString("extraItem");
 		
-		Toast.makeText(
-				getApplicationContext(),
-				"Vous avez choisi : "+extraItem, Toast.LENGTH_LONG).show();
+		if(requestCode == REQUEST_CODE && resultCode == RESULT_OK ) {
+			Bundle bundle = data.getExtras();
+			String extraItem = bundle.getString("extraItem");
+			
+			Toast.makeText(
+					getApplicationContext(),
+					"Vous avez choisi : "+extraItem, Toast.LENGTH_LONG).show();
+		}
+		
 	}
 
 	@Override
@@ -109,6 +121,11 @@ public class DashboardActivity extends Activity {
 			Intent intent = new Intent(DashboardActivity.this,
 					BillingActivity.class);
 			startActivity(intent);
+			return true;
+		case android.R.id.home:
+			Intent intentHome = new Intent(DashboardActivity.this,
+					MainActivity.class);
+			startActivity(intentHome);
 			return true;
 
 		default:

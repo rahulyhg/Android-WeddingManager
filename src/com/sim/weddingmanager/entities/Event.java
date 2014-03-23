@@ -9,6 +9,7 @@ public class Event {
 	public static final String COLUMN_NAME = "name";
 	public static final String COLUMN_BUDGET = "budget";
 	public static final String COLUMN_CATEGORY = "category";
+	public static final String COLUMN_PERSON = "person";
 	
 	@Column(name = COLUMN_ID, type = ColumnType.INTEGER, isPrimaryKey = true, isAutoincrement = true)
 	private int id;
@@ -21,6 +22,9 @@ public class Event {
 	
 	@Column(name = COLUMN_BUDGET)
 	private double budget;
+	
+	@Column(name = COLUMN_PERSON)
+	private String person;
 
 	/**
 	 * 
@@ -33,12 +37,13 @@ public class Event {
 	 * @param name
 	 * @param budget
 	 */
-	public Event(int id, String name,String category, double budget) {
+	public Event(int id, String name,String category, double budget, String person) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.budget = budget;
 		this.category = category;
+		this.person =person;
 	}
 
 	/**
@@ -46,11 +51,12 @@ public class Event {
 	 * @param type
 	 * @param budget
 	 */
-	public Event(String name,String category, double budget) {
+	public Event(String name,String category, double budget, String person) {
 		super();
 		this.name = name;
 		this.budget = budget;
 		this.category = category;
+		this.person = person;
 	}
 
 	public int getId() {
@@ -83,6 +89,14 @@ public class Event {
 
 	public void setCategory(String category) {
 		this.category = category;
+	}
+	
+	public String getPerson() {
+		return person;
+	}
+
+	public void setPerson(String person) {
+		this.person = person;
 	}
 
 }

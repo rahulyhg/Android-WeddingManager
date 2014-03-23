@@ -12,5 +12,26 @@
         android:dividerHeight="10dp"
         android:background="#ededed"
         android:padding="10dp" />
+    
+    <GridView
+        android:id="@+id/grid_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="150dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:visibility="gone" >
+    </GridView>
+    
+    <ProgressBar 
+       android:id="@+id/progress_data"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:layout_marginBottom="10dp"
+       android:animationResolution="16"
+       android:indeterminateOnly="true"
+       android:visibility="invisible"/>
 
 </RelativeLayout>
