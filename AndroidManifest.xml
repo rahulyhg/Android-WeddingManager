@@ -10,7 +10,7 @@
 
     <!-- TRAP 3 -->
     <application
-        android:name=".MainApplication"
+        android:name="com.sim.weddingmanager.MainApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -20,18 +20,10 @@
         <activity
             android:name="com.sim.weddingmanager.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sim.weddingmanager.MainActivity" />
         </activity>
-
-        <!-- TODO3 THEME STYLE -->
         <activity
             android:name="com.sim.weddingmanager.DashboardActivity"
             android:label="@string/title_activity_dashboard"
@@ -41,7 +33,18 @@
             android:name="com.sim.weddingmanager.BillingActivity"
             android:label="@string/title_activity_billing" >
         </activity>
-        <activity android:name=".EventListActivity" >
+        <activity android:name="com.sim.weddingmanager.EventListActivity" >
+        </activity>
+        <activity
+            android:name="com.sim.weddingmanager.SplashActivity"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
